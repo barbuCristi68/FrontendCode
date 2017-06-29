@@ -1,0 +1,13 @@
+<div class="jumbotron">
+<p>First Name:<input type="text" ng-model="FirstName"></p>
+<p>Last Name<input type="text" ng-model="LastName"></p>
+<p>CNP:<input type="number" ng-model="CNP"></p>
+<p>Age:<input type="number" ng-model="Age"></p>
+<p><a class="btn btn-primary btn-lg" role="button" ng-click="back()">back</a></p>
+<p><a class="btn btn-primary btn-lg" role="button" ng-click="reset()">reset</a></p>
+<p><a class="btn btn-primary btn-lg" role="button" ng-click="save()">save</a></p>
+<p><a class="btn btn-primary btn-lg" role="button" ng-click="show()">Show/Hide</a></p>
+    <div class="jumbotron" ng-hide="myValue">
+        <div ng-include="'views/userlist.html'"></div>
+    </div>
+</div>

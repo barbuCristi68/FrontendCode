@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <tr>
+        <th>FirstName</th>
+        <th>Last Name</th>
+        <th>CNP</th>
+        <th>Age</th>
+    </tr>
+    <tr ng-repeat="user in users">
+        <td class="text-center">
+            {{user.FirstName}}
+        </td>
+        <td class="text-center">
+            {{user.LastName}}
+        </td>
+        <td class="text-center">
+            {{user.CNP}}
+        </td>
+        <td class="text-center">
+            {{user.Age}}
+        </td>
+    </tr>
+</table>
