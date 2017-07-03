@@ -1,0 +1,55 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add job</h2>
+    </div>
+    <ng-form name="jobAddForm">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group" ng-class="{ 'has-error': jobAddForm.jobid.$invalid }">
+                    <div class="form-group" >
+                        <label for="jobid">Job Id:</label>
+                        <input  id="jobid" class="form-control" name="jobid" type="text" ng-model="job.jobId" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group" ng-class="{ 'has-error': jobAddForm.jobtitle.$invalid }">
+                    <div class="form-group">
+
+                        <label for="jobtitle">Job Title:</label>
+                        <input  id="jobtitle" class="form-control" type="text" name="jobtitle" ng-model="job.jobTitle" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group" ng-class="{ 'has-error': jobAddForm.minsalary.$invalid }">
+            <div class="form-group">
+                <label for="minsalary">Min Salary:</label>
+                <input  id="minsalary" class="form-control" type="text" name="minsalary" ng-model="job.minSalary" required>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group" ng-class="{ 'has-error': jobAddForm.maxsalary.$invalid }">
+            <div class="form-group">
+                <label for="maxsalary">Max Salary: </label>
+                <input  id="maxsalary" class="form-control" type="number" name="maxsalary" ng-model="job.maxSalary" required>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <div class="container">
+
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="create(job)" ng-disabled="jobAddForm.$invalid ">Save</a>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="reset()">Reset</a>
+                </div>
+            </div>
+        </div>
+    </ng-form>
+</div>
