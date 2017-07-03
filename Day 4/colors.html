@@ -1,0 +1,12 @@
+<select ng-model="color1" ng-options="color.text for color in colors track by color.text "></select>
+<select ng-model="color" ng-options="color.text group by color.type for color in colors" ng-change="changeColor()"></select>
+<span ng-class="saveColor">Some Text</span>
+<p>Mod1:<input type="text" ng-model="mod1"></p>
+<p>Mod2:<input type="text" ng-model="mod2"></p>
+<table>
+<tr ng-repeat="color2 in colors | orderBy:mod1 | filter:mod2 ">
+    <td class="text-center">
+        {{color2.text}}
+    </td>
+</tr>
+</table>
